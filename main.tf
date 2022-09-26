@@ -1,4 +1,4 @@
-## fail scenario by not maintaing without google_notebooks_instance.kms_key 
+## fail scenario by not maintaing without google_notebooks_instance.kms_key and google_notebooks_instance.disk_encryption
 
 # Required Google APIs
 
@@ -67,7 +67,7 @@ resource "google_notebooks_instance" "instance" {
   service_account = google_service_account.custom_sa.email
   no_public_ip    = true
   no_proxy_access = false
-  disk_encryption = "CMEK"
+  #disk_encryption = "CMEK"
   #kms_key         = google_kms_crypto_key.secrets.id
   machine_type = "e2-medium"
 
